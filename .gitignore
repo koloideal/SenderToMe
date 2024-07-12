@@ -1,3 +1,4 @@
 .idea
 secret_data
 database
+database_func/__pycache__/
