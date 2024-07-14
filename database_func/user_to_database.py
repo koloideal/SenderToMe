@@ -14,9 +14,10 @@ async def user_to_database(message: types.Message) -> None:
     cursor: Cursor = connection.cursor()
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS users 
-                              (id int,
+                              (id INT,
                                first_name varchar(50),
                                username varchar(50),
+                               stock_messages INT DEFAULT 2,
                                UNIQUE(id))''')
     connection.commit()
 

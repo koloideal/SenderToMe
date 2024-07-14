@@ -7,7 +7,7 @@ from aiogram.exceptions import TelegramBadRequest
 config = ConfigParser()
 config.read('secret_data/config.ini')
 
-creator_id = config['Telegram']['creator_id']
+creator_id = int(config['Telegram']['creator_id'])
 
 
 async def get_logs_rout(message: types.Message):
